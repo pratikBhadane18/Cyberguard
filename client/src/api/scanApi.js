@@ -3,7 +3,7 @@ import axios from 'axios';
 // Base URL for all API calls. Vite's proxy (vite.config.js) forwards /api
 // requests to the Express server during development.
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   timeout: 15000,
 });
 
