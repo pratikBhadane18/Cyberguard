@@ -1,0 +1,21 @@
+{
+  "name": "cyberguard-server",
+  "version": "1.0.0",
+  "description": "CyberGuard backend API server",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "node --test tests/ssrf.test.js tests/tls.test.js tests/header.test.js tests/cookie.test.js tests/risk.test.js tests/report.test.js tests/disclosure.test.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "ipaddr.js": "^2.2.0",
+    "pdfkit": "^0.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
